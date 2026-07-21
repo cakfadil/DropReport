@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tes Penyimpanan</title>
+<style>
+body{
+    font-family:Arial;
+    padding:20px;
+}
+button{
+    width:100%;
+    padding:15px;
+    margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Tes Penyimpanan</h2>
+
+<input id="nama" placeholder="Masukkan nama">
+
+<button onclick="simpan()">
+Simpan
+</button>
+
+<button onclick="baca()">
+Baca
+</button>
+
+<p id="hasil"></p>
+
+<script>
+
+function simpan(){
+
+localStorage.setItem(
+"nama",
+document.getElementById("nama").value
+);
+
+alert("Tersimpan");
+
+}
+
+function baca(){
+
+document.getElementById("hasil").innerHTML=
+localStorage.getItem("nama");
+
+}
+
+</script>
+
+</body>
+</html>
